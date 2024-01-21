@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="content">
+      <div id="buttons"></div>
+      <div id="searchContainer">
+        <div id="searchIdContainer">
+          <input id="searchId" type="number" />
+          <div id="searchIdBtn"></div>
+        </div>
+        <div id="searchNameContainer">
+          <input id="searchName" type="text" />
+          <div id="searchNameBtn"></div>
+        </div>
+      </div>
+
+      <div id="table_container"></div>
+      <div id="bottomMenu">
+        <span id="leftBottomButton"></span>
+        <input id="bottomInput" type="text" placeholder="1" />
+        <span id="rightBottomButton"></span>
+        <div id="bottomSelect">
+          <span id="chooseSelect"> Choose value: </span>
+          <select id="elementLimit">
+            <option value="-">-</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div id="initialContainer">
+      <div id="initialTitle">Before you are start check below</div>
+      <button id="vaderButton">Audio</button>
+      <span>or</span>
+      <button id="jokeButton">Joke</button>
+      <div id="jokeContainer">
+        <span id="loading"></span>
+        <span id="joke"></span>
+      </div>
+    </div>
+    <button id="deleteCheckedButton"></button>
+    <div id="showModalContainer">
+      <div id="showModal"></div>
+      <span id="closeModal">X</span>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

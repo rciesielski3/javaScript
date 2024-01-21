@@ -1,0 +1,250 @@
+:root {
+  --white: #fff;
+  --primary-500: #3f83f8;
+  --primary-600: #1c64f2;
+  --primary-700: #1a56db;
+  --gray-400: #c5c5c5;
+  --gray-600: #565656;
+  --gray-700: lightslategray;
+  --gray-800: #847f90;
+  --gray-900: #3e3b3b;
+  --red-900: rgb(111, 23, 23);
+}
+
+html {
+  text-align: center;
+}
+
+.blur-background {
+  filter: blur(5px);
+  transition: filter 1s ease;
+  pointer-events: none;
+}
+
+body {
+  background-image: url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#buttons > button {
+  max-width: 350px;
+  width: 80%;
+  padding: 5px;
+  margin: 5px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: var(--gray-600);
+}
+
+#buttons > button:hover {
+  box-shadow: var(--gray-400) 5px;
+  background-color: var(--primary-700);
+  transform: scale(1.05);
+}
+
+#buttons > button:focus {
+  color: var(--white);
+  background-color: var(--primary-500);
+}
+
+#initialContainer {
+  opacity: 0.9;
+  background-color: var(--gray-400);
+  border-radius: 10px;
+  display: inline-table;
+  width: 50%;
+  padding: 10px;
+  font-family: fantasy;
+}
+
+#searchIdContainer,
+#searchNameContainer {
+  display: inline-grid;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+#searchId,
+#searchName,
+#bottomInput {
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: var(--gray-400);
+}
+
+#vaderButton,
+#jokeButton,
+button#searchIdBtn,
+button#searchNameBtn,
+button#lBottomBtn,
+button#rBottomBtn {
+  max-width: fit-content;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  font-size: 15px;
+  color: var(--white);
+  background-color: var(--primary-500);
+}
+
+#playBtn,
+#nextJokeBtn {
+  width: 30%;
+  padding: 5px;
+  margin: 35px;
+  font-size: 15px;
+  color: var(--white);
+  background-color: var(--primary-600);
+  position: absolute;
+  left: 43%;
+  transform: translateX(-50%);
+}
+
+div#table_container {
+  display: inline;
+}
+
+table {
+  border-collapse: collapse;
+  opacity: 0.9;
+  display: inline-block;
+}
+
+tr,
+td {
+  border: 2px solid var(--white);
+  padding: 10px;
+  background-color: var(--gray-400);
+}
+
+th {
+  border: 2px solid var(--white);
+  background-color: var(--gray-600);
+  color: var(--white);
+}
+
+#chooseSelect,
+select#elementLimit {
+  display: inline-block;
+  background-color: var(--gray-400);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#showModalContainer {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  background-color: var(--gray-800);
+  border: 2px solid var(--gray-900);
+}
+
+#showModal td {
+  background: var(--gray-700);
+  max-width: 350px;
+}
+
+#showModal table {
+  opacity: 1;
+}
+
+#closeModal {
+  position: absolute;
+  top: -2px;
+  padding: 7px;
+  left: -30px;
+  font-size: 20px;
+  color: var(--white);
+  background-color: var(--red-900);
+}
+
+#deleteCheckedButton {
+  width: 80%;
+  padding: 5px;
+  margin: 5px;
+  font-size: 15px;
+  opacity: 90%;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--red-900);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#deleteCheckedButton:hover {
+  box-shadow: var(--gray-400) 2px 8px 8px -5px;
+  background-color: var(--primary-500);
+}
+
+#info {
+  width: 80%;
+  margin: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: var(--primary-500);
+}
+
+#remove {
+  width: 80%;
+  margin: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--red-900);
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #buttons > button {
+    width: 80%;
+    padding: 5px;
+    margin: 5px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-color: var(--gray-600);
+  }
+  #searchIdContainer,
+  #searchNameContainer {
+    display: inline-grid;
+    padding: 10px;
+    padding-top: 20px;
+  }
+
+  #searchId,
+  #searchName {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--gray-400);
+  }
+  td:nth-child(3),
+  th:nth-child(3) {
+    display: none;
+  }
+
+  /* table {
+    max-width: 50%;
+  } */
+  #showModal td {
+    max-width: 250px;
+  }
+
+  #showModalContainer {
+    width: fit-content;
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
+}
